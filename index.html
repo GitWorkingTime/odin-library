@@ -8,6 +8,37 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>My Library</h1>
+    <button id="add-btn">Add a new book</button>
+    <dialog id="add-book">
+        <div class="container">
+            <div class="close" id="close-modal">X</div>
+            <form id="book-form">
+                <label for="title" class="input-label">Title:</label>
+                <input type="text" minlength="1" id="title" name="title" required>
+                <label for="author" class="input-label">Author:</label>
+                <input type="text" minlength="1" id="author" name="author" required>
+                <label for="pages" class="input-label"># of Pages:</label>
+                <input type="number" min="1" id="pages" name="pages" required>
+                <label for="read" class="input-label">Have you read this?</label>
+                <input type="checkbox" id="read" name="read">
+
+                <button type="submit" id="submit-btn">Add Book</button>
+            </form>
+        </div>
+    </dialog>
+    <table id="library">
+        <caption>My Collection of Books</caption>
+        <thead>
+            <th scope="col" name="identification">ID:</th>
+            <th scope="col" name="title of book">Title</th>
+            <th scope="col" name="author of book">Author</th>
+            <th scope="col" name="total number of pages">Number of Pages</th>
+            <th scope="col" name="has been read before" colspan="2">Has been read</th>
+        </thead>
+        <tbody id="library-body">
+        </tbody>
+    </table>
+
 </body>
 </html>
