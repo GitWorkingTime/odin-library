@@ -81,3 +81,31 @@ form.addEventListener("submit", (evt) => {
     form.reset();
     modal.close();
 });
+
+// Form Validation
+const title = document.querySelector("#title");
+title.addEventListener('input', (evt) => {
+    if(title.validity.valueMissing) {
+        title.setCustomValidity("You must enter a title!");
+    } else {
+        title.setCustomValidity("");
+    }
+});
+
+const author = document.querySelector("#author");
+author.addEventListener('input', (evt) => {
+    if(author.validity.valueMissing) {
+        author.setCustomValidity("You must enter an author name!");
+    } else {
+        title.setCustomValidity("");
+    }
+});
+
+const pages = document.querySelector("#pages");
+pages.addEventListener('input', (evt) => {
+    if(pages.validity.valueMissing) {
+        pages.setCustomValidity("You must enter the number of pages!");
+    } else {
+        pages.setCustomValidity("");
+    }
+})
